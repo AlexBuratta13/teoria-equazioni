@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EquazioniLibrary;
-using System;
 
 namespace EquzioniLibrary.Test
 {
@@ -16,7 +16,8 @@ namespace EquzioniLibrary.Test
             bool risposta = Equazioni.IsDetermined(a, b);
             Assert.AreEqual(risposta_aspettata, risposta);
         }
-        public void TestIsDetermined1()
+        [TestMethod]
+        public void TestIsNotDetermined()
         {
             double a = 5;
             double b = 0;
@@ -24,6 +25,7 @@ namespace EquzioniLibrary.Test
             bool risposta = Equazioni.IsDetermined(a, b);
             Assert.AreEqual(risposta_aspettata, risposta);
         }
+        [TestMethod]
         public void TestIsInconsided()
         {
             double a = 0;
@@ -32,6 +34,7 @@ namespace EquzioniLibrary.Test
             bool risposta = Equazioni.IsInconsisted(a, b);
             Assert.AreEqual(risposta_aspettata, risposta);
         }
+        [TestMethod]
         public static void TestIsInconsident1()
         {
             double a = 7;
@@ -40,6 +43,7 @@ namespace EquzioniLibrary.Test
             bool risposta = Equazioni.IsInconsisted(a, b);
             Assert.AreEqual(risposta_aspettata, risposta);
         }
+        [TestMethod]
         public static void TestIsDegree2()
         {
             double a = 3;
@@ -47,6 +51,7 @@ namespace EquzioniLibrary.Test
             bool risposta = Equazioni.IsDegree2(a);
             Assert.AreEqual(risposta_aspettata, risposta);
         }
+        [TestMethod]
         public static void TestIsNotDegree2()
         {
             double a = 8;
@@ -54,6 +59,7 @@ namespace EquzioniLibrary.Test
             bool risposta = Equazioni.IsDegree2(a);
             Assert.AreEqual(risposta_aspettata, risposta);
         }
+        [TestMethod]
         public static void TestDelta()
         {
             double a = 4;
