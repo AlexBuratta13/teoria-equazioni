@@ -30,7 +30,7 @@ namespace EquazioniLibrary
                 return false;
             }
         }
-        public static bool IsDegree(double a)
+        public static bool IsDegree2(double a)
         {
             if (a != 0)
             {
